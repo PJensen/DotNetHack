@@ -4,12 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DotNetHack
+namespace DotNetHack.Editor
 {
-    /// <summary>
-    /// EntryPoint
-    /// </summary>
-    static class EntryPoint
+    static class EditorEntryPoint
     {
         /// <summary>
         /// The main entry point for the application.
@@ -19,11 +16,7 @@ namespace DotNetHack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-#if DEBUG
-            Application.Run(new MainForm(0));
-#else
-            Application.Run(new LoginForm());
-#endif
+            Application.Run(new Editor());
         }
     }
 }

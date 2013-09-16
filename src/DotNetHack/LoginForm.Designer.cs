@@ -1,4 +1,6 @@
-﻿namespace DotNetHack
+﻿
+using DotNetHack.Shared.Components;
+namespace DotNetHack
 {
     partial class LoginForm
     {
@@ -44,7 +46,7 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.groupBoxChangeLog = new System.Windows.Forms.GroupBox();
             this.richTextBoxChangeLog = new System.Windows.Forms.RichTextBox();
-            this.dnhClientComponent = new DotNetHack.ExperimentalGUI.DNHClientComponent(this.components);
+            this.dnhClientComponent = new DotNetHack.Shared.Components.DNHClientComponent(this.components);
             this.statusStripLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanelLogin.SuspendLayout();
@@ -107,6 +109,7 @@
             // 
             this.tableLayoutPanelLogin.SetColumnSpan(this.pictureBoxDNHLogo, 2);
             this.pictureBoxDNHLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxDNHLogo.Image = global::DotNetHack.Shared.Properties.Resources.logoDotNetHack;
             this.pictureBoxDNHLogo.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxDNHLogo.Name = "pictureBoxDNHLogo";
             this.pictureBoxDNHLogo.Size = new System.Drawing.Size(698, 176);
@@ -229,6 +232,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DotNetHack Authentication";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.statusStripLogin.ResumeLayout(false);
             this.statusStripLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -259,6 +263,6 @@
         private System.Windows.Forms.GroupBox groupBoxChangeLog;
         private System.Windows.Forms.RichTextBox richTextBoxChangeLog;
         private System.Windows.Forms.Button buttonExit;
-        private ExperimentalGUI.DNHClientComponent dnhClientComponent;
+        private DNHClientComponent dnhClientComponent;
     }
 }
